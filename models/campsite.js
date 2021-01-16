@@ -49,8 +49,8 @@ const campsiteSchema = new Schema({
     comments: [commentSchema]
 },  {
     author: {
-        type: String,
-        required: true
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
     }
 }, {
     timestamps: true
